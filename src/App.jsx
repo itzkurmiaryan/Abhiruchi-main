@@ -7,12 +7,12 @@ import Footer from "./component/Footer";
 // Home sections
 import Hero from "./component/Hero";
 import About from "./component/About";
-import Gallery from "./component/Gallary"; // ⚠ Make sure file name matches
+import Gallery from "./component/Gallary"; // ✅ fixed
 import Contact from "./component/Contact";
 
 // Pages
-import Events from "./component/events";
-import JoinUs from "./component/joinus";
+import Events from "./component/events";   // ✅ fixed
+import JoinUs from "./component/JoinUs";   // ✅ fixed
 import ClubPage from "./component/ClubPage";
 
 function HomePage() {
