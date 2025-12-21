@@ -1,0 +1,288 @@
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { X } from "lucide-react";
+
+import rockonLogo from "../assets/rockon.png";
+import panacheLogo from "../assets/panache.png";
+import itechLogo from "../assets/itech.png";
+import imagesLogo from "../assets/images.png";
+import strideLogo from "../assets/stride.png";
+import mfactorLogo from "../assets/mfactor.png";
+import triLogo from "../assets/tri.png";
+
+import profileImg from "../assets/profile.png"; // 🔴 TEMP PROFILE IMAGE (REPLACE LATER)
+
+/* ================== DUMMY DATA ================== */
+
+// 🔴 CHANGE NAME / COURSE / BRANCH / YEAR / PHOTO HERE LATER
+const dummyTeam = [
+  {
+    role: "President",
+    name: "Dummy Name",
+    course: "B.Tech",
+    branch: "Computer Science",
+    year: "3rd Year",
+    photo: profileImg,
+  },
+  {
+    role: "Vice President",
+    name: "Dummy Name",
+    course: "B.Tech",
+    branch: "IT",
+    year: "3rd Year",
+    photo: profileImg,
+  },
+  {
+    role: "Secretary",
+    name: "Dummy Name",
+    course: "BBA",
+    branch: "Management",
+    year: "2nd Year",
+    photo: profileImg,
+  },
+  {
+    role: "Treasurer",
+    name: "Dummy Name",
+    course: "B.Com",
+    branch: "Commerce",
+    year: "2nd Year",
+    photo: profileImg,
+  },
+  {
+    role: "Coordinator",
+    name: "Dummy Name",
+    course: "BA",
+    branch: "Arts",
+    year: "1st Year",
+    photo: profileImg,
+  },
+];
+
+// 🔴 ACTIVE MEMBERS (CHANGE LATER)
+const dummyMembers = Array.from({ length: 10 }, (_, i) => ({
+  name: `Active Member ${i + 1}`,
+  course: "B.Tech",
+  branch: "CSE",
+  year: "2nd Year",
+  photo: profileImg,
+}));
+
+/* ================== CLUBS DATA ================== */
+
+const clubsData = {
+  rockon: {
+    title: "Rock On",
+    logo: rockonLogo,
+    color: "#fb7185",
+    tagline: "Feel the rhythm. Own the stage.",
+    about:
+      "Rock On Club is the cultural heartbeat of Abhiruchi. It nurtures talent in music, dance and stage performances.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  panache: {
+    title: "Panache",
+    logo: panacheLogo,
+    color: "#a855f7",
+    tagline: "Art beyond imagination.",
+    about: "Panache focuses on art, painting and creative crafts.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  itech: {
+    title: "I-Tech",
+    logo: itechLogo,
+    color: "#22d3ee",
+    tagline: "Innovate. Build. Lead.",
+    about: "I-Tech promotes coding, robotics, AI and innovation culture.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  images: {
+    title: "Images",
+    logo: imagesLogo,
+    color: "#fbbf24",
+    tagline: "Stories that stay forever.",
+    about: "Images handles media, content and documentation.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  stride: {
+    title: "Stride",
+    logo: strideLogo,
+    color: "#34d399",
+    tagline: "Strength. Speed. Spirit.",
+    about: "Stride promotes sportsmanship and fitness.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  mfactor: {
+    title: "M-Factor",
+    logo: mfactorLogo,
+    color: "#8b5cf6",
+    tagline: "Lead with impact.",
+    about: "M-Factor builds leadership and management skills.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+  tri: {
+    title: "The Responsible Invertian",
+    logo: triLogo,
+    color: "#fb923c",
+    tagline: "Serve beyond self.",
+    about: "TRI focuses on social responsibility and welfare.",
+    team: dummyTeam,
+    members: dummyMembers,
+  },
+};
+
+/* ================== COMPONENT ================== */
+
+export default function ClubPage() {
+  const { clubName } = useParams();
+  const club = clubsData[clubName];
+
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  if (!club) {
+    return (
+      <div className="text-center mt-40 text-xl text-white">
+        Club not found
+      </div>
+    );
+  }
+
+  return (
+    <section className="relative min-h-screen overflow-hidden text-white noise-bg">
+      {/* BACKGROUND */}
+      <motion.div
+        className="absolute inset-0 opacity-30"
+        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+        transition={{ duration: 20, repeat: Infinity }}
+        style={{
+          background: `linear-gradient(120deg, ${club.color}, #000 60%)`,
+          backgroundSize: "200% 200%",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-6 py-32">
+        {/* HERO */}
+        <div className="text-center mb-36">
+          <img src={club.logo} className="w-44 mx-auto mb-8" />
+          <h1
+            className="text-6xl md:text-7xl font-extrabold"
+            style={{ color: club.color }}
+          >
+            {club.title}
+          </h1>
+          <p className="mt-4 text-xl text-gray-200">{club.tagline}</p>
+        </div>
+
+        {/* ABOUT */}
+        <div className="bg-white/10 backdrop-blur-xl rounded-[3rem] p-16 mb-36 border border-white/20">
+          <h2 className="text-4xl font-bold mb-6">About the Club</h2>
+          <p className="text-lg leading-loose">{club.about}</p>
+        </div>
+
+        {/* PRESIDENTIAL TEAM */}
+        <h2 className="text-4xl font-bold mb-20 text-center">
+          Presidential Team
+        </h2>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-36">
+          {club.team.map((member, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.08, rotateY: 8 }}
+              onClick={() => setSelectedMember(member)}
+              className="cursor-pointer bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/20"
+            >
+              <img
+                src={member.photo}
+                className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-lg font-bold">{member.name}</h3>
+              <p className="text-sm text-gray-300">{member.role}</p>
+              <p className="text-sm mt-2">{member.course}</p>
+              <p className="text-sm">{member.branch}</p>
+              <p className="text-sm">{member.year}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* ACTIVE MEMBERS */}
+        <h2 className="text-4xl font-bold mb-16 text-center">
+          Active Members
+        </h2>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {club.members.map((member, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.1 }}
+              onClick={() => setSelectedMember(member)}
+              className="cursor-pointer bg-white/10 rounded-2xl p-6 text-center border border-white/20"
+            >
+              <img
+                src={member.photo}
+                className="w-20 h-20 rounded-full mx-auto mb-3 object-cover"
+              />
+              <h4 className="font-semibold">{member.name}</h4>
+              <p className="text-sm">{member.course}</p>
+              <p className="text-sm">{member.branch}</p>
+              <p className="text-sm">{member.year}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* ================= PROFILE MODAL ================= */}
+      {selectedMember && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-lg"
+          onClick={() => setSelectedMember(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 120 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2.5rem] p-10 w-[90%] max-w-md text-center"
+          >
+            <button
+              onClick={() => setSelectedMember(null)}
+              className="absolute top-6 right-6 text-white/70 hover:text-white"
+            >
+              <X size={28} />
+            </button>
+
+            <img
+              src={selectedMember.photo}
+              className="w-36 h-36 rounded-full mx-auto mb-6 object-cover border-4 border-white/30"
+            />
+
+            <h2 className="text-2xl font-bold">{selectedMember.name}</h2>
+            {selectedMember.role && (
+              <p className="text-sm text-gray-300 mt-1">
+                {selectedMember.role}
+              </p>
+            )}
+
+            <div className="mt-6 space-y-2 text-gray-200">
+              <p>🎓 {selectedMember.course}</p>
+              <p>📘 {selectedMember.branch}</p>
+              <p>📅 {selectedMember.year}</p>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </section>
+  );
+}
