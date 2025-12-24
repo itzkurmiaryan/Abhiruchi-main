@@ -19,7 +19,7 @@ const clubs = [
   { name: "images", title: "Images", tag: "Publication", logo: imagesLogo, gradient: "from-green-400 to-green-600" },
   { name: "stride", title: "Stride", tag: "Sports", logo: strideLogo, gradient: "from-emerald-400 to-emerald-600" },
   { name: "mfactor", title: "M-Factor", tag: "Management", logo: mfactorLogo, gradient: "from-cyan-400 to-cyan-600" },
-  { name: "tri", title: "TRI", tag: "Social Responsibility", logo: triLogo, gradient: "from-orange-400 to-orange-600" },
+  { name: "tri", title: "RI", tag: "Social Responsibility", logo: triLogo, gradient: "from-orange-400 to-orange-600" },
 ];
 
 const About = () => {
