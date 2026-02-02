@@ -5,27 +5,12 @@ export default function Events() {
   const [previewImage, setPreviewImage] = useState(null);
   const [activeClub, setActiveClub] = useState("All");
 
-  /*
-    👉 FUTURE UPDATE GUIDE:
-    - Naye events add karne ke liye "events" array me object add karo
-    - Har object ka structure:
-      {
-        name: "Event Name",
-        club: "Club Name",
-        date: "DD Month YYYY",
-        images: ["/images/example1.jpg", "/images/example2.jpg"]
-      }
-    - Images ko replace karne ke liye:
-      "/images/example1.jpg" → apni real image ka path
-    - Clubs add karne ke liye:
-      "clubs" array me naam add karna
-  */
   const events = [
     {
       name: "IOT War",
       club: "I-Tech Club",
       date: "12 March 2024",
-      images: ["/images/iot.jpg", "/images/iot.jpg", "/images/iot.jpg"],
+    images: ["/event/images/mfactor1.jpg", "/event/images/mfactor2.jpg", "/event/images/mfactor3.jpg"],
     },
     {
       name: "Tech Expo",
@@ -37,49 +22,49 @@ export default function Events() {
       name: "Cultural Night",
       club: "Rock On Club",
       date: "25 February 2024",
-      images: ["/images/culture.jpg", "/images/culture.jpg", "/images/culture.jpg"],
+      images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
     },
     {
       name: "Battle of Bands",
       club: "Rock On Club",
       date: "18 March 2024",
-      images: ["/images/culture.jpg", "/images/culture.jpg"],
+     images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
     },
     {
       name: "Sports Meet",
       club: "Stride Club",
       date: "10 January 2024",
-      images: ["/images/stride.jpg", "/images/stride.jpg", "/images/stride.jpg"],
+    images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg", "/event/images/stride3.jpg"],
     },
     {
       name: "Marathon Run",
       club: "Stride Club",
       date: "22 February 2024",
-      images: ["/images/stride.jpg", "/images/stride.jpg"],
+      images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg"],
     },
     {
       name: "Art Exhibition",
       club: "Panache Club",
       date: "15 March 2024",
-      images: ["/images/art.jpg", "/images/art.jpg", "/images/art.jpg"],
+      images: ["/event/images/panache1.jpg", "/event/images/panache2.jpg", "/event/images/panache3.jpg"],
     },
     {
-      name: "Publication Drive",
-      club: "Publication Club",
-      date: "08 April 2024",
-      images: ["/images/publication.jpg", "/images/publication.jpg"],
+      name: "Dharmakshetra",
+      club: "Images Club",
+      date: "",
+      images: ["/event/images/1.jpg", "/event/images/2.jpg", "/event/images/3.jpg", "/event/images/4.jpg"],
     },
     {
       name: "Social Awareness Rally",
       club: "Responsible Invertians",
       date: "02 February 2024",
-      images: ["/images/iot.jpg", "/images/iot.jpg"],
+      images: ["/event/images/responsible1.jpg", "/event/images/responsible2.jpg"],
     },
     {
       name: "M Factor Workshop",
       club: "M Factor",
       date: "30 March 2024",
-      images: ["/images/mfactor.jpg", "/images/mfactor.jpg", "/images/mfactor.jpg"],
+      images: ["/event/images/mfactor1.jpg", "/event/images/mfactor2.jpg", "/event/images/mfactor3.jpg"],
     },
   ];
 
@@ -90,7 +75,7 @@ export default function Events() {
     "Rock On Club",
     "Stride Club",
     "Panache Club",
-    "Publication Club",
+    "Images Club",
     "Responsible Invertians",
     "M Factor",
   ];

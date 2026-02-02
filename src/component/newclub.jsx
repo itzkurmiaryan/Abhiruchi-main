@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
+/* LOGOS */
 import rockonLogo from "../assets/rockon.png";
 import panacheLogo from "../assets/panache.png";
 import itechLogo from "../assets/itech.png";
@@ -10,79 +11,26 @@ import imagesLogo from "../assets/images.png";
 import strideLogo from "../assets/stride.png";
 import mfactorLogo from "../assets/mfactor.png";
 import triLogo from "../assets/tri.png";
+
+/* IMAGES */
 import profileImg from "../assets/profile.png";
 import sp from "../assets/stride/p.png";
-import Riddhima from "../assets/images/1.jpg"; 
-import Nitin from "../assets/images/2.jpg"; 
-import Harshdeep from "../assets/images/3.jpg"; 
-import Shagun from "../assets/images/4.jpg"; 
-import Eshan from "../assets/images/5.jpg"; 
-import Jessica from "../assets/images/6.jpg"; 
-import Kavya from "../assets/images/7.jpg"; 
-import Sukhman from "../assets/images/8.jpg"; 
-import Yuvika from "../assets/images/a.jpg"; 
-import Vishesh from "../assets/images/b.jpg"; 
-import Khushi from "../assets/images/c.jpg"; 
-import Shreya from "../assets/images/d.jpg"; 
-import Vinayak from "../assets/images/e.jpg";  
 
+import Riddhima from "../assets/images/1.jpg";
+import Nitin from "../assets/images/2.jpg";
+import Harshdeep from "../assets/images/3.jpg";
+import Shagun from "../assets/images/4.jpg";
+import Eshan from "../assets/images/5.jpg";
+import Jessica from "../assets/images/6.jpg";
+import Kavya from "../assets/images/7.jpg";
+import Sukhman from "../assets/images/8.jpg";
+import Yuvika from "../assets/images/a.jpg";
+import Vishesh from "../assets/images/b.jpg";
+import Khushi from "../assets/images/c.jpg";
+import Shreya from "../assets/images/d.jpg";
+import Vinayak from "../assets/images/e.jpg";
 
-/* ================== DUMMY DATA ================== */
-
-//  NAME / COURSE / BRANCH / YEAR / PHOTO HERE LATER
-const dummyTeam = [
-  {
-    role: "President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "Computer Science",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Vice President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "IT",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Secretary",
-    name: "Dummy Name",
-    course: "BBA",
-    branch: "Management",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Treasurer",
-    name: "Dummy Name",
-    course: "B.Com",
-    branch: "Commerce",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Coordinator",
-    name: "Dummy Name",
-    course: "BA",
-    branch: "Arts",
-    year: "1st Year",
-    photo: profileImg,
-  },
-];
-
-// 🔴 ACTIVE MEMBERS (CHANGE LATER)
-const dummyMembers = Array.from({ length: 10 }, (_, i) => ({
-  name: `Active Member ${i + 1}`,
-  course: "B.Tech",
-  branch: "CSE",
-  year: "2nd Year",
-  photo: profileImg,
-}));
-
-/* ================== CLUBS DATA ================== */
+/* ================== CLUB DATA ================== */
 
 const clubsData = {
   rockon: {
@@ -526,144 +474,102 @@ const clubsData = {
 export default function ClubPage() {
   const { clubName } = useParams();
   const club = clubsData[clubName];
-
   const [selectedMember, setSelectedMember] = useState(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    window.scrollTo(0, 0);
   }, []);
 
   if (!club) {
-    return (
-      <div className="text-center mt-40 text-xl text-white">
-        Club not found
-      </div>
-    );
+    return <div className="text-white text-center mt-40 text-xl">Club not found</div>;
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden text-white noise-bg">
-      {/* BACKGROUND */}
-      <motion.div
+    <section className="relative min-h-screen text-white bg-black">
+      {/* SIMPLE BACKGROUND */}
+      <div
         className="absolute inset-0 opacity-30"
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 20, repeat: Infinity }}
         style={{
-          background: `linear-gradient(120deg, ${club.color}, #000 60%)`,
-          backgroundSize: "200% 200%",
+          background: `linear-gradient(120deg, ${club.color}, #000 70%)`,
         }}
       />
 
       <div className="relative max-w-7xl mx-auto px-6 py-32">
         {/* HERO */}
-        <div className="text-center mb-36">
-          <img src={club.logo} className="w-44 mx-auto mb-8" />
-          <h1
-            className="text-6xl md:text-7xl font-extrabold"
-            style={{ color: club.color }}
-          >
+        <div className="text-center mb-32">
+          <img src={club.logo} className="w-40 mx-auto mb-6" />
+          <h1 className="text-6xl font-extrabold" style={{ color: club.color }}>
             {club.title}
           </h1>
-          <p className="mt-4 text-xl text-gray-200">{club.tagline}</p>
+          <p className="mt-4 text-lg text-gray-200">{club.tagline}</p>
         </div>
 
         {/* ABOUT */}
-        <div className="bg-white/10 backdrop-blur-xl rounded-[3rem] p-16 mb-36 border border-white/20">
-          <h2 className="text-4xl font-bold mb-6">About the Club</h2>
-          <p className="text-lg leading-loose">{club.about}</p>
+        <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-14 mb-32 border border-white/20">
+          <h2 className="text-3xl font-bold mb-4">About the Club</h2>
+          <p className="text-lg">{club.about}</p>
         </div>
 
-        {/* PRESIDENTIAL TEAM */}
-        <h2 className="text-4xl font-bold mb-20 text-center">
-          Presidential Team
-        </h2>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-36">
-          {club.team.map((member, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.08, rotateY: 8 }}
-              onClick={() => setSelectedMember(member)}
-              className="cursor-pointer bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/20"
+        {/* TEAM */}
+        <h2 className="text-4xl font-bold mb-20 text-center">Presidential Team</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-32">
+          {club.team.map((m) => (
+            <div
+              key={m.name}
+              onClick={() => setSelectedMember(m)}
+              className="cursor-pointer bg-white/10 rounded-3xl p-8 text-center border border-white/20 hover:scale-105 transition"
             >
-              <img
-                src={member.photo}
-                className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-lg font-bold">{member.name}</h3>
-              <p className="text-sm text-gray-300">{member.role}</p>
-              <p className="text-sm mt-2">{member.course}</p>
-              <p className="text-sm">{member.branch}</p>
-              <p className="text-sm">{member.year}</p>
-            </motion.div>
+              <img src={m.photo} loading="lazy" className="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="font-bold">{m.name}</h3>
+              <p className="text-sm text-gray-300">{m.role}</p>
+              <p className="text-sm mt-2">{m.course}</p>
+              <p className="text-sm">{m.branch}</p>
+              <p className="text-sm">{m.year}</p>
+            </div>
           ))}
         </div>
 
-        {/* ACTIVE MEMBERS */}
-        <h2 className="text-4xl font-bold mb-16 text-center">
-          Active Members
-        </h2>
-
+        {/* MEMBERS */}
+        <h2 className="text-4xl font-bold mb-16 text-center">Active Members</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {club.members.map((member, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.1 }}
-              onClick={() => setSelectedMember(member)}
-              className="cursor-pointer bg-white/10 rounded-2xl p-6 text-center border border-white/20"
+          {club.members.map((m) => (
+            <div
+              key={m.name}
+              onClick={() => setSelectedMember(m)}
+              className="cursor-pointer bg-white/10 rounded-2xl p-6 text-center border border-white/20 hover:scale-105 transition"
             >
-              <img
-                src={member.photo}
-                className="w-20 h-20 rounded-full mx-auto mb-3 object-cover"
-              />
-              <h4 className="font-semibold">{member.name}</h4>
-              <p className="text-sm">{member.course}</p>
-              <p className="text-sm">{member.branch}</p>
-              <p className="text-sm">{member.year}</p>
-            </motion.div>
+              <img src={m.photo} loading="lazy" className="w-20 h-20 rounded-full mx-auto mb-3 object-cover" />
+              <h4 className="font-semibold">{m.name}</h4>
+              <p className="text-sm">{m.course}</p>
+              <p className="text-sm">{m.branch}</p>
+              <p className="text-sm">{m.year}</p>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* ================= PROFILE MODAL ================= */}
+      {/* MODAL */}
       {selectedMember && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-lg"
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
           onClick={() => setSelectedMember(null)}
         >
           <motion.div
-            initial={{ scale: 0.7, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 120 }}
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2.5rem] p-10 w-[90%] max-w-md text-center"
+            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 w-[90%] max-w-md text-center"
           >
-            <button
-              onClick={() => setSelectedMember(null)}
-              className="absolute top-6 right-6 text-white/70 hover:text-white"
-            >
-              <X size={28} />
+            <button onClick={() => setSelectedMember(null)} className="absolute top-5 right-5">
+              <X />
             </button>
-
-            <img
-              src={selectedMember.photo}
-              className="w-36 h-36 rounded-full mx-auto mb-6 object-cover border-4 border-white/30"
-            />
-
+            <img src={selectedMember.photo} className="w-36 h-36 rounded-full mx-auto mb-6 object-cover" />
             <h2 className="text-2xl font-bold">{selectedMember.name}</h2>
-            {selectedMember.role && (
-              <p className="text-sm text-gray-300 mt-1">
-                {selectedMember.role}
-              </p>
-            )}
-
-            <div className="mt-6 space-y-2 text-gray-200">
-              <p>🎓 {selectedMember.course}</p>
-              <p>📘 {selectedMember.branch}</p>
-              <p>📅 {selectedMember.year}</p>
-            </div>
+            <p className="mt-4">🎓 {selectedMember.course}</p>
+            <p>📘 {selectedMember.branch}</p>
+            <p>📅 {selectedMember.year}</p>
           </motion.div>
         </motion.div>
       )}
