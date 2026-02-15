@@ -5,17 +5,12 @@ const Gallery = () => {
   const [activeItem, setActiveItem] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
 
-  /*
-    👉 FUTURE UPDATE GUIDE:
-    - Naye gallery items add karne ke liye galleryItems array me object add karo
-    - images array me real image paths daal dena
-    - Abhi dummy images use ho rahi hain
-  */
+
   const galleryItems = [
     {
       title: "Art Exhibition",
       caption: "Creative expressions by Panache members.",
-      images: ["/images/art.jpg", "/images/art.jpg", "/images/art.jpg"], // 👉 Add more images here
+      images: ["/images/art.jpg", "/images/art.jpg", "/images/art.jpg"], 
       gradient: "from-pink-500 to-rose-500",
     },
     {
@@ -25,39 +20,42 @@ const Gallery = () => {
       gradient: "from-purple-500 to-indigo-500",
     },
     {
-      title: "IOT War",
-      caption: "Innovative projects by I-Tech club.",
-      images: ["/images/iot.jpg", "/images/iot.jpg", "/images/iot.jpg"],
+      title: "Shark Tank Invertis",
+      caption: "Students pitching innovative business ideas in M-Factor's flagship event.",
+     images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"],
       gradient: "from-sky-500 to-blue-600",
     },
     {
-      title: "Sports Meet",
-      caption: "Energy & enthusiasm by Stride club.",
-      images: ["/images/stride.jpg", "/images/stride.jpg", "/images/stride.jpg"],
-      gradient: "from-emerald-500 to-green-600",
+      title: "Smart India Hackathon",
+      caption: "Students showcasing innovative solutions in the national-level competition.",
+      images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"], // Dummy images
+      gradient: "from-green-500 to-emerald-600",
     },
     {
-      title: "Publication Drive",
-      caption: "Students expressing thoughts in words.",
-      images: ["/images/publication.jpg", "/images/publication.jpg"],
+      title: "Convocation 2026",
+      caption: "Celebrating the achievements of our graduating students.",
+      images: ["/event/ri/convocation.webp"],
       gradient: "from-yellow-500 to-orange-500",
     },
     {
       title: "Social Awareness",
       caption: "Programs by Responsible Invertians.",
-      images: ["/images/iot.jpg", "/images/iot.jpg"], // Dummy image
+      images: ["/images/iot.jpg", "/images/iot.jpg"], 
       gradient: "from-red-500 to-pink-600",
     },
   ];
 
-  // ⚠️ Sliding gallery – DO NOT CHANGE
+  // ⚠️ Sliding gallery
   const slidingImages = [
-    "/images/art.jpg",
-    "/images/culture.jpg",
-    "/images/iot.jpg",
-    "/images/stride.jpg",
-    "/images/publication.jpg",
-    "/images/iot.jpg",
+    "/event/itech/sih/sih2.webp",
+    "/event/itech/sih/sih3.webp",
+    "/event/itech/sih/sih4.webp",
+    "/event/ri/convocation.webp",
+    "/event/mfactor/shark/shark1.webp",
+    "/event/mfactor/shark/shark2.webp",
+    "/event/mfactor/shark/shark3.webp",
+    "/event/mfactor/shark/shark4.webp",
+
   ];
 
   return (

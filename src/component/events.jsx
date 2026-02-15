@@ -7,54 +7,32 @@ export default function Events() {
 
   const events = [
     {
-      name: "IOT War",
-      club: "I-Tech Club",
-      date: "12 March 2024",
+      name: "Shark Tank Invertis – Season 2",
+      club: "M Factor Club",
+      date: "06 November 2025",
       description:
-        "IOT War was a competitive technical event where students built innovative IoT-based solutions to solve real-world problems. Teams showcased smart automation models and presented their ideas before a jury panel.",
+        "Shark Tank Invertis Season 2 proved to be a landmark initiative in fostering innovation and entrepreneurial thinking at Invertis University. The event featured the signing of an MOU with the Indian Industries Association (IIA) in the presence of Mr. Dinesh Goyal (National President, IIA) and Mr. Syrish Raghuyal (Director, Positech International Pvt. Ltd.), marking a major step toward strengthening industry–academia collaboration. Students showcased innovative and strategically designed business ideas, demonstrating strong presentation skills, problem-solving abilities, and entrepreneurial confidence. Their pitches impressed the judges, reflecting the growing culture of creativity and startup mindset on campus. The winners were felicitated with cash prizes, making the event both motivating and impactful for budding entrepreneurs. Shark Tank Invertis Season 2 successfully blended learning, industry exposure, and recognition, inspiring students to pursue their entrepreneurial aspirations with confidence. The University expresses gratitude to Hon’ble Chancellor Dr. Umesh Gautam and Executive Director Mr. Parth Gautam for their continued encouragement and support in nurturing the spirit of innovation at Invertis University.",
       highlights: [
         "50+ Participants",
-        "Live Hardware Demonstration",
+        "20 Innovative Pitches",
         "Cash Prize Distribution",
       ],
-      images: ["/event/images/iot1.jpg", "/event/images/iot2.jpg", "/event/images/iot3.jpg"],
+      images: ["/event/mfactor/shark/shark5.webp","/event/mfactor/shark/shark1.webp", "/event/mfactor/shark/shark2.webp", "/event/mfactor/shark/shark3.webp", "/event/mfactor/shark/shark4.webp"],
     },
     {
-      name: "Tech Expo",
+      name: "Smart India Hackathon Grand Final",
       club: "I-Tech Club",
-      date: "05 April 2024",
-      images: ["/images/iot.jpg", "/images/iot.jpg"],
+      date: "13 December 2025",
+      description:
+        "Students of the Department of Engineering & Technology, Invertis University, Bareilly, achieved a remarkable milestone by winning the Smart India Hackathon (SIH) Grand Final, securing a cash prize of ₹1.5 lakh. The national-level competition was held at IIT-BHU, Varanasi, with participation from leading IITs, NITs, and universities across the country. The winning team “Gandharvas” impressed the jury with their innovative project “AquaSENSE”, an advanced smart device designed to assess water quality with high precision. The solution is capable of identifying whether water is clean or polluted, detecting plastic particles, algae, and other impurities, and presenting real-time data through internet-based technology for effective decision-making.",
+      highlights: [
+        "1000+ Projects Displayed",
+        "Interactive Booths",
+        "Live Demonstrations",
+      ],
+      images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"],
     },
-    {
-      name: "Cultural Night",
-      club: "Rock On Club",
-      date: "25 February 2024",
-      images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
-    },
-    {
-      name: "Battle of Bands",
-      club: "Rock On Club",
-      date: "18 March 2024",
-      images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
-    },
-    {
-      name: "Sports Meet",
-      club: "Stride Club",
-      date: "10 January 2024",
-      images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg", "/event/images/stride3.jpg"],
-    },
-    {
-      name: "Marathon Run",
-      club: "Stride Club",
-      date: "22 February 2024",
-      images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg"],
-    },
-    {
-      name: "Art Exhibition",
-      club: "Panache Club",
-      date: "15 March 2024",
-      images: ["/event/images/panache1.jpg", "/event/images/panache2.jpg", "/event/images/panache3.jpg"],
-    },
+   
     {
       name: "Dharmakshetra",
       club: "Images Club",
@@ -62,17 +40,20 @@ export default function Events() {
       images: ["/event/images/1.jpg", "/event/images/2.jpg", "/event/images/3.jpg", "/event/images/4.jpg"],
     },
     {
-      name: "Social Awareness Rally",
+      name: "Convocation 2026",
       club: "Responsible Invertians",
       date: "02 February 2024",
-      images: ["/event/images/responsible1.jpg", "/event/images/responsible2.jpg"],
+      description:
+        "The 12th Convocation Ceremony of Invertis University, held on 17th January 2026, celebrated academic excellence and achievement. The ceremony was graced by Dr. Umesh Gautam, Chancellor, and Mr. Parth Gautam, Pro-Chancellor, whose inspiring addresses motivated students to uphold discipline and values. Degrees were awarded to the 2024–25 batch, including Gold, Silver, and Bronze Medalists, with over 1800 students graduating. Eminent personalities Ms. Sushmita Sen, Mr. Navjot Singh Sidhu, Mr. Sanjay Mishra, and Mr. Tapas Das were conferred Honorary Doctorates, inspiring graduates toward confident and purposeful futures.",
+        highlights: [
+          "500+ Graduates Honored",
+          "Keynote Speeches",
+          "Cultural Performances",
+        ],
+      images: ["/event/ri/convocation.webp"],
     },
-    {
-      name: "M Factor Workshop",
-      club: "M Factor",
-      date: "30 March 2024",
-      images: ["/event/images/mfactor1.jpg", "/event/images/mfactor2.jpg", "/event/images/mfactor3.jpg"],
-    },
+   
+
   ];
 
   // ===== Club Filter List =====
