@@ -10,7 +10,14 @@ export default function Events() {
       name: "IOT War",
       club: "I-Tech Club",
       date: "12 March 2024",
-    images: ["/event/images/mfactor1.jpg", "/event/images/mfactor2.jpg", "/event/images/mfactor3.jpg"],
+      description:
+        "IOT War was a competitive technical event where students built innovative IoT-based solutions to solve real-world problems. Teams showcased smart automation models and presented their ideas before a jury panel.",
+      highlights: [
+        "50+ Participants",
+        "Live Hardware Demonstration",
+        "Cash Prize Distribution",
+      ],
+      images: ["/event/images/iot1.jpg", "/event/images/iot2.jpg", "/event/images/iot3.jpg"],
     },
     {
       name: "Tech Expo",
@@ -28,13 +35,13 @@ export default function Events() {
       name: "Battle of Bands",
       club: "Rock On Club",
       date: "18 March 2024",
-     images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
+      images: ["/event/images/rockon1.jpg", "/event/images/rockon2.jpg", "/event/images/rockon3.jpg"],
     },
     {
       name: "Sports Meet",
       club: "Stride Club",
       date: "10 January 2024",
-    images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg", "/event/images/stride3.jpg"],
+      images: ["/event/images/stride1.jpg", "/event/images/stride2.jpg", "/event/images/stride3.jpg"],
     },
     {
       name: "Marathon Run",
@@ -156,7 +163,7 @@ function EventRow({ event, onImageClick }) {
 
   return (
     <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-amber-500/20 transition-all duration-500">
-      
+
       {/* ===== EVENT HEADER ===== */}
       <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4">
@@ -170,6 +177,26 @@ function EventRow({ event, onImageClick }) {
         </div>
 
         <p className="text-amber-400 mt-2">{event.club}</p>
+
+        {/* Description */}
+        <p className="text-gray-300 mt-4 max-w-3xl leading-relaxed">
+          {event.description}
+        </p>
+
+        {/* Highlights */}
+        {event.highlights && (
+          <div className="flex flex-wrap gap-3 mt-4">
+            {event.highlights.map((item, idx) => (
+              <span
+                key={idx}
+                className="px-3 py-1 bg-white/10 rounded-full text-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        )}
+
         <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-pink-500 mt-4 rounded-full" />
       </div>
 

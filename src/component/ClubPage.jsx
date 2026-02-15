@@ -26,62 +26,6 @@ import Khushi from "../assets/images/c.jpg";
 import Shreya from "../assets/images/d.jpg"; 
 import Vinayak from "../assets/images/e.jpg";  
 
-
-/* ================== DUMMY DATA ================== */
-
-//  NAME / COURSE / BRANCH / YEAR / PHOTO HERE LATER
-const dummyTeam = [
-  {
-    role: "President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "Computer Science",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Vice President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "IT",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Secretary",
-    name: "Dummy Name",
-    course: "BBA",
-    branch: "Management",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Treasurer",
-    name: "Dummy Name",
-    course: "B.Com",
-    branch: "Commerce",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Coordinator",
-    name: "Dummy Name",
-    course: "BA",
-    branch: "Arts",
-    year: "1st Year",
-    photo: profileImg,
-  },
-];
-
-// 🔴 ACTIVE MEMBERS (CHANGE LATER)
-const dummyMembers = Array.from({ length: 10 }, (_, i) => ({
-  name: `Active Member ${i + 1}`,
-  course: "B.Tech",
-  branch: "CSE",
-  year: "2nd Year",
-  photo: profileImg,
-}));
-
 /* ================== CLUBS DATA ================== */
 
 const clubsData = {
