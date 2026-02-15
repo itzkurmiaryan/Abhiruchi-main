@@ -8,7 +8,7 @@ export default function Events() {
   const events = [
     {
       name: "Shark Tank Invertis – Season 2",
-      club: "M Factor Club",
+      club: "M Factor",
       date: "06 November 2025",
       description:
         "Shark Tank Invertis Season 2 proved to be a landmark initiative in fostering innovation and entrepreneurial thinking at Invertis University. The event featured the signing of an MOU with the Indian Industries Association (IIA) in the presence of Mr. Dinesh Goyal (National President, IIA) and Mr. Syrish Raghuyal (Director, Positech International Pvt. Ltd.), marking a major step toward strengthening industry–academia collaboration. Students showcased innovative and strategically designed business ideas, demonstrating strong presentation skills, problem-solving abilities, and entrepreneurial confidence. Their pitches impressed the judges, reflecting the growing culture of creativity and startup mindset on campus. The winners were felicitated with cash prizes, making the event both motivating and impactful for budding entrepreneurs. Shark Tank Invertis Season 2 successfully blended learning, industry exposure, and recognition, inspiring students to pursue their entrepreneurial aspirations with confidence. The University expresses gratitude to Hon’ble Chancellor Dr. Umesh Gautam and Executive Director Mr. Parth Gautam for their continued encouragement and support in nurturing the spirit of innovation at Invertis University.",
