@@ -8,10 +8,19 @@ import panacheLogo from "../assets/panache.png";
 import itechLogo from "../assets/itech.png";
 import imagesLogo from "../assets/images.png";
 import strideLogo from "../assets/stride.png";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
 import mfactorLogo from "../assets/mfactor.png";
 import triLogo from "../assets/tri.png";
 import profileImg from "../assets/profile.png";
 import sp from "../assets/stride/p.png";
+<<<<<<< HEAD
+=======
+import harshit from "../assets/stride/harshit.jpeg";
+import parul from "../assets/stride/parul.jpeg";
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
 import Riddhima from "../assets/images/1.jpg"; 
 import Nitin from "../assets/images/2.jpg"; 
 import Harshdeep from "../assets/images/3.jpg"; 
@@ -25,6 +34,23 @@ import Vishesh from "../assets/images/b.jpg";
 import Khushi from "../assets/images/c.jpg"; 
 import Shreya from "../assets/images/d.jpg"; 
 import Vinayak from "../assets/images/e.jpg";  
+<<<<<<< HEAD
+=======
+import divayansh from "../assets/rockon/divayansh.jpeg";
+import saudamini from "../assets/rockon/saudamini.jpeg";
+import Aarambh from "../assets/ri/arambh.jpeg";
+import shreya from "../assets/ri/shreya.jpeg";
+import somnath from "../assets/ri/somnath.jpeg";
+import akshara from "../assets/panache/akshara.jpeg";
+import harsh from "../assets/panache/harsh.jpeg";
+import saloni from "../assets/panache/saloni.jpeg";
+import sayan from "../assets/panache/sayan.jpeg";
+import ananya from "../assets/mfactor/ananya.jpeg";
+import dhruv from "../assets/mfactor/dhruv.jpeg";
+import jayesh from "../assets/mfactor/jayesh.jpeg";
+import tejas from "../assets/mfactor/tejas.jpeg";
+import mitali from "../assets/itech/m.jpeg";
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
 
 /* ================== CLUBS DATA ================== */
 
@@ -59,7 +85,11 @@ const clubsData = {
         course: "BA LLB",
         branch: " ",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: saudamini,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Joint Secretary",
@@ -75,7 +105,11 @@ const clubsData = {
         course: "B.SC",
         branch: "(Forensic Sc) ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: divayansh,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
 
     ],
@@ -107,7 +141,11 @@ const clubsData = {
         course: "B.A BED",
         branch: " ",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: saloni,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Vice President",
@@ -115,7 +153,11 @@ const clubsData = {
         course: "Btech",
         branch: "BioTech",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: sayan,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Secretary",
@@ -123,7 +165,11 @@ const clubsData = {
         course: "B.Com",
         branch: "Hons ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: akshara,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Joint Secretary",
@@ -131,7 +177,11 @@ const clubsData = {
         course: "BCA",
         branch: " ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: harsh,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Treasurer",
@@ -178,7 +228,11 @@ const clubsData = {
         course: "BCA",
         branch: "",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: mitali,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Secretary",
@@ -302,7 +356,11 @@ const clubsData = {
         course: "BSC",
         branch: "ZBC",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: harshit,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
 
       {
@@ -311,7 +369,11 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: parul,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Treasurer",
@@ -350,7 +412,11 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: tejas,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Vice President",
@@ -358,7 +424,11 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: ananya,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Secretary",
@@ -374,7 +444,11 @@ const clubsData = {
         course: "BSC",
         branch: "Forensic Sc ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: jayesh,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Treasurer",
@@ -382,7 +456,11 @@ const clubsData = {
         course: "BCA",
         branch: "",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: dhruv,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
 
     ],
@@ -413,7 +491,11 @@ const clubsData = {
         course: "BSC Hons ",
         branch: "Agriculture ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: Aarambh,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Vice President",
@@ -429,7 +511,11 @@ const clubsData = {
         course: "BBA LLB",
         branch: "",
         year: "3rd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: shreya,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Joint Secretary",
@@ -437,7 +523,11 @@ const clubsData = {
         course: "BBA",
         branch: " ",
         year: "2nd Year",
+<<<<<<< HEAD
         photo: profileImg,
+=======
+        photo: somnath,
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       },
       {
         role: "Treasurer",

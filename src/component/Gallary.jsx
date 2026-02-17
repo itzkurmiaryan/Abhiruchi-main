@@ -7,6 +7,7 @@ const Gallery = () => {
 
 
   const galleryItems = [
+<<<<<<< HEAD
     {
       title: "Art Exhibition",
       caption: "Creative expressions by Panache members.",
@@ -23,6 +24,13 @@ const Gallery = () => {
       title: "Shark Tank Invertis",
       caption: "Students pitching innovative business ideas in M-Factor's flagship event.",
      images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"],
+=======
+    
+    {
+      title: "Shark Tank Invertis",
+      caption: "Students pitching innovative business ideas in M-Factor's flagship event.",
+     images: ["/event/mfactor/shark/shark5.webp","/event/mfactor/shark/shark1.webp", "/event/mfactor/shark/shark2.webp", "/event/mfactor/shark/shark3.webp", "/event/mfactor/shark/shark4.webp"],
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
       gradient: "from-sky-500 to-blue-600",
     },
     {
@@ -37,12 +45,16 @@ const Gallery = () => {
       images: ["/event/ri/convocation.webp"],
       gradient: "from-yellow-500 to-orange-500",
     },
+<<<<<<< HEAD
     {
       title: "Social Awareness",
       caption: "Programs by Responsible Invertians.",
       images: ["/images/iot.jpg", "/images/iot.jpg"], 
       gradient: "from-red-500 to-pink-600",
     },
+=======
+
+>>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
   ];
 
   // ⚠️ Sliding gallery
