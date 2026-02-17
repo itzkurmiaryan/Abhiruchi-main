@@ -5,13 +5,11 @@ const Gallery = () => {
   const [activeItem, setActiveItem] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
 
-
   const galleryItems = [
-<<<<<<< HEAD
     {
       title: "Art Exhibition",
       caption: "Creative expressions by Panache members.",
-      images: ["/images/art.jpg", "/images/art.jpg", "/images/art.jpg"], 
+      images: ["/images/art.jpg", "/images/art.jpg", "/images/art.jpg"],
       gradient: "from-pink-500 to-rose-500",
     },
     {
@@ -22,21 +20,27 @@ const Gallery = () => {
     },
     {
       title: "Shark Tank Invertis",
-      caption: "Students pitching innovative business ideas in M-Factor's flagship event.",
-     images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"],
-=======
-    
-    {
-      title: "Shark Tank Invertis",
-      caption: "Students pitching innovative business ideas in M-Factor's flagship event.",
-     images: ["/event/mfactor/shark/shark5.webp","/event/mfactor/shark/shark1.webp", "/event/mfactor/shark/shark2.webp", "/event/mfactor/shark/shark3.webp", "/event/mfactor/shark/shark4.webp"],
->>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
+      caption:
+        "Students pitching innovative business ideas in M-Factor's flagship event.",
+      images: [
+        "/event/mfactor/shark/shark5.webp",
+        "/event/mfactor/shark/shark1.webp",
+        "/event/mfactor/shark/shark2.webp",
+        "/event/mfactor/shark/shark3.webp",
+        "/event/mfactor/shark/shark4.webp",
+      ],
       gradient: "from-sky-500 to-blue-600",
     },
     {
       title: "Smart India Hackathon",
-      caption: "Students showcasing innovative solutions in the national-level competition.",
-      images: ["/event/itech/sih/sih1.webp", "/event/itech/sih/sih2.webp", "/event/itech/sih/sih3.webp", "/event/itech/sih/sih4.webp"], // Dummy images
+      caption:
+        "Students showcasing innovative solutions in the national-level competition.",
+      images: [
+        "/event/itech/sih/sih1.webp",
+        "/event/itech/sih/sih2.webp",
+        "/event/itech/sih/sih3.webp",
+        "/event/itech/sih/sih4.webp",
+      ],
       gradient: "from-green-500 to-emerald-600",
     },
     {
@@ -45,19 +49,14 @@ const Gallery = () => {
       images: ["/event/ri/convocation.webp"],
       gradient: "from-yellow-500 to-orange-500",
     },
-<<<<<<< HEAD
     {
       title: "Social Awareness",
       caption: "Programs by Responsible Invertians.",
-      images: ["/images/iot.jpg", "/images/iot.jpg"], 
+      images: ["/images/iot.jpg", "/images/iot.jpg"],
       gradient: "from-red-500 to-pink-600",
     },
-=======
-
->>>>>>> 1d34f37d0d4f879d6915943afdbe90604b774a18
   ];
 
-  // ⚠️ Sliding gallery
   const slidingImages = [
     "/event/itech/sih/sih2.webp",
     "/event/itech/sih/sih3.webp",
@@ -67,13 +66,14 @@ const Gallery = () => {
     "/event/mfactor/shark/shark2.webp",
     "/event/mfactor/shark/shark3.webp",
     "/event/mfactor/shark/shark4.webp",
-
   ];
 
   return (
-    <section id="gallery" className="bg-slate-950 text-white py-20 overflow-hidden">
-
-      {/* ===== Heading ===== */}
+    <section
+      id="gallery"
+      className="bg-slate-950 text-white py-20 overflow-hidden"
+    >
+      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ const Gallery = () => {
         </p>
       </motion.div>
 
-      {/* ===== Sliding Images ===== */}
+      {/* Sliding Images */}
       <div className="relative mb-24 overflow-hidden">
         <motion.div
           className="flex gap-6"
@@ -100,12 +100,13 @@ const Gallery = () => {
               src={img}
               onClick={() => setActiveItem({ image: img })}
               className="w-72 h-44 rounded-2xl object-cover opacity-80 cursor-pointer hover:opacity-100 transition"
+              alt=""
             />
           ))}
         </motion.div>
       </div>
 
-      {/* ===== Cards ===== */}
+      {/* Cards */}
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
         {galleryItems.map((item, i) => (
           <motion.div
@@ -119,6 +120,7 @@ const Gallery = () => {
             <img
               src={item.images[0]}
               className="absolute inset-0 w-full h-full object-cover opacity-15"
+              alt=""
             />
             <div className="absolute inset-0 bg-black/30" />
 
@@ -133,7 +135,7 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* ===== Modal (Cards + Sliding Images) ===== */}
+      {/* Modal */}
       <AnimatePresence>
         {activeItem && (
           <motion.div
@@ -154,13 +156,14 @@ const Gallery = () => {
               transition={{ type: "spring", stiffness: 120 }}
               className="bg-slate-900 rounded-3xl p-6 max-w-4xl w-full"
             >
-              {/* Card modal */}
               {activeItem.images && (
                 <>
                   <h3 className="text-3xl font-bold mb-2">
                     {activeItem.title}
                   </h3>
-                  <p className="text-white/70 mb-6">{activeItem.caption}</p>
+                  <p className="text-white/70 mb-6">
+                    {activeItem.caption}
+                  </p>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     {activeItem.images.map((img, idx) => (
@@ -169,17 +172,18 @@ const Gallery = () => {
                         src={img}
                         onClick={() => setPreviewImage(img)}
                         className="rounded-xl w-full h-44 object-cover cursor-pointer hover:scale-105 transition"
+                        alt=""
                       />
                     ))}
                   </div>
                 </>
               )}
 
-              {/* Sliding image modal */}
               {activeItem.image && (
                 <img
                   src={activeItem.image}
                   className="rounded-2xl w-full max-h-[80vh] object-contain"
+                  alt=""
                 />
               )}
 
@@ -197,7 +201,7 @@ const Gallery = () => {
         )}
       </AnimatePresence>
 
-      {/* ===== Single Image Preview ===== */}
+      {/* Single Image Preview */}
       <AnimatePresence>
         {previewImage && (
           <motion.div
@@ -207,6 +211,7 @@ const Gallery = () => {
             <img
               src={previewImage}
               className="max-h-[90vh] rounded-2xl object-contain"
+              alt=""
             />
           </motion.div>
         )}
