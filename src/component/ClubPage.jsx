@@ -10,63 +10,55 @@ import imagesLogo from "../assets/images.png";
 import strideLogo from "../assets/stride.png";
 import mfactorLogo from "../assets/mfactor.png";
 import triLogo from "../assets/tri.png";
-import profileImg from "../assets/profile.png"; // 🔴 TEMP PROFILE IMAGE (REPLACE LATER)
+import profileImg from "../assets/profile.png"; 
+
 import sp from "../assets/stride/p.png";
+import harshit from "../assets/stride/harshit.jpeg";
+import parul from "../assets/stride/parul.jpeg";
 
-/* ================== DUMMY DATA ================== */
 
-// 🔴 CHANGE NAME / COURSE / BRANCH / YEAR / PHOTO HERE LATER
-const dummyTeam = [
-  {
-    role: "President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "Computer Science",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Vice President",
-    name: "Dummy Name",
-    course: "B.Tech",
-    branch: "IT",
-    year: "3rd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Secretary",
-    name: "Dummy Name",
-    course: "BBA",
-    branch: "Management",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Treasurer",
-    name: "Dummy Name",
-    course: "B.Com",
-    branch: "Commerce",
-    year: "2nd Year",
-    photo: profileImg,
-  },
-  {
-    role: "Coordinator",
-    name: "Dummy Name",
-    course: "BA",
-    branch: "Arts",
-    year: "1st Year",
-    photo: profileImg,
-  },
-];
 
-// 🔴 ACTIVE MEMBERS (CHANGE LATER)
-const dummyMembers = Array.from({ length: 10 }, (_, i) => ({
-  name: `Active Member ${i + 1}`,
-  course: "B.Tech",
-  branch: "CSE",
-  year: "2nd Year",
-  photo: profileImg,
-}));
+import saudamini from "../assets/rockon/saudamini.jpeg";
+import divayansh from "../assets/rockon/divayansh.jpeg";
+
+import arambh from "../assets/ri/arambh.jpeg";
+import shreya from "../assets/ri/shreya.jpeg";
+import somnath from "../assets/ri/somnath.jpeg";
+
+import akshara from "../assets/panache/akshara.jpeg";
+import harsh from "../assets/panache/harsh.jpeg";
+import saloni from "../assets/panache/saloni.jpeg";
+import sayan from "../assets/panache/sayan.jpeg";
+
+import mitali from "../assets/itech/m.jpeg";
+
+import jayesh from "../assets/mfactor/jayesh.jpeg";
+import dhruv from "../assets/mfactor/dhruv.jpeg";
+import ananya from "../assets/mfactor/ananya.jpeg";
+import tejas from "../assets/mfactor/tejas.jpeg";
+
+import shreya2 from "../assets/images/shreya2.jpg";
+import khushi from "../assets/images/khushi.jpg";
+import vinayak from "../assets/images/vinayak.jpg";
+import yuvika from "../assets/images/yuvika.jpg";
+import vishesh from "../assets/images/vishesh.jpg";
+import nitin from "../assets/images/nitin.jpg";
+import riddhima from "../assets/images/riddhima.jpg";
+import sukhman from "../assets/images/sukhman.jpg";
+import harshdeep from "../assets/images/harshdeep.jpg";
+import shagun from "../assets/images/shagun.jpg";
+import eshan from "../assets/images/eshan.jpg";
+import jessica from "../assets/images/jessica.jpg";
+import kavya from "../assets/images/kavya.jpg";
+
+
+
+
+
+
+
+
+
 
 /* ================== CLUBS DATA ================== */
 
@@ -101,7 +93,7 @@ const clubsData = {
         course: "BA LLB",
         branch: " ",
         year: "3rd Year",
-        photo: profileImg,
+        photo: saudamini,
       },
       {
         role: "Joint Secretary",
@@ -109,7 +101,7 @@ const clubsData = {
         course: "B.A LLB",
         branch: " ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: ["../assets/rockon/akshima.jpeg",]
       },
       {
         role: "Treasurer",
@@ -117,7 +109,7 @@ const clubsData = {
         course: "B.SC",
         branch: "(Forensic Sc) ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: divayansh,
       },
 
     ],
@@ -149,7 +141,7 @@ const clubsData = {
         course: "B.A BED",
         branch: " ",
         year: "3rd Year",
-        photo: profileImg,
+        photo: saloni,
       },
       {
         role: "Vice President",
@@ -157,7 +149,7 @@ const clubsData = {
         course: "Btech",
         branch: "BioTech",
         year: "2nd Year",
-        photo: profileImg,
+        photo: sayan,
       },
       {
         role: "Secretary",
@@ -165,7 +157,7 @@ const clubsData = {
         course: "B.Com",
         branch: "Hons ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: akshara,
       },
       {
         role: "Joint Secretary",
@@ -173,7 +165,7 @@ const clubsData = {
         course: "BCA",
         branch: " ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: harsh,
       },
       {
         role: "Treasurer",
@@ -181,7 +173,7 @@ const clubsData = {
         course: "BCA",
         branch: " ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: shreya,
       },
 
     ],
@@ -220,7 +212,7 @@ const clubsData = {
         course: "BCA",
         branch: "",
         year: "3rd Year",
-        photo: profileImg,
+        photo: mitali,
       },
       {
         role: "Secretary",
@@ -275,7 +267,7 @@ const clubsData = {
         course: "BA",
         branch: "English(Hons) ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: yuvika,
       },
       {
         role: "Vice President",
@@ -283,7 +275,7 @@ const clubsData = {
         course: "B.A LLB",
         branch: "",
         year: "2nd Year",
-        photo: profileImg,
+        photo: vishesh,
       },
       {
         role: "Secretary",
@@ -291,7 +283,7 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech ",
         year: "3rd Year",
-        photo: profileImg,
+        photo: khushi,
       },
       {
         role: "Joint Secretary",
@@ -299,7 +291,7 @@ const clubsData = {
         course: "BTech",
         branch: "AI ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: shreya2,
       },
       {
         role: "Treasurer",
@@ -307,22 +299,20 @@ const clubsData = {
         course: "BTech",
         branch: "Cse ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: vinayak,
       },
 
     ],
 
     members: [
-      { name: "Nitin Patel", course: "BTech", branch: "CSE", year: "1st Year", photo: profileImg },
-      { name: "Amit", course: "B.Tech", branch: "CSE", year: "1st Year", photo: profileImg },
-      { name: "Riya", course: "BA", branch: "Dance", year: "3rd Year", photo: profileImg },
-      { name: "Kunal", course: "B.Com", branch: "Commerce", year: "2nd Year", photo: profileImg },
-      { name: "Riya", course: "BA", branch: "Dance", year: "3rd Year", photo: profileImg },
-      { name: "Kunal", course: "B.Com", branch: "Commerce", year: "2nd Year", photo: profileImg },
-      { name: "Riya", course: "BA", branch: "Dance", year: "3rd Year", photo: profileImg },
-      { name: "Kunal", course: "B.Com", branch: "Commerce", year: "2nd Year", photo: profileImg },
-      { name: "Riya", course: "BA", branch: "Dance", year: "3rd Year", photo: profileImg },
-      { name: "Kunal", course: "B.Com", branch: "Commerce", year: "2nd Year", photo: profileImg },
+      { name: "Nitin Patel", course: "BTech", branch: "CSE", year: "1st Year", photo: nitin },
+      { name: "Riddhima Sharma", course: "BBA", branch: "", year: "1st Year", photo: riddhima },
+      { name: "Sukhmanpreet Kaur", course: "BBA", branch: "", year: "1st Year", photo: sukhman },
+      { name: "Harshdeep Singh", course: "BBA", branch: "", year: "1st Year", photo: harshdeep },
+      { name: "Shagun Rai", course: "BBA", branch: "", year: "1st Year", photo: shagun },
+      { name: "Eshan Bhardwaj", course: "BBA", branch: "", year: "1st Year", photo: eshan },
+      { name: "Jessica Gupta", course: "Btech", branch: "Biotech", year: "1st Year", photo: jessica },
+      { name: "Kavya Wadhwa", course: "Btech", branch: "Biotech", year: "1st Year", photo: kavya },
     ],
   },
   stride: {
@@ -346,7 +336,7 @@ const clubsData = {
         course: "BSC",
         branch: "ZBC",
         year: "3rd Year",
-        photo: profileImg,
+        photo: harshit,
       },
 
       {
@@ -355,7 +345,7 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: parul,
       },
       {
         role: "Treasurer",
@@ -394,7 +384,7 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: tejas,
       },
       {
         role: "Vice President",
@@ -402,7 +392,7 @@ const clubsData = {
         course: "BTech",
         branch: "BioTech",
         year: "2nd Year",
-        photo: profileImg,
+        photo: ananya,
       },
       {
         role: "Secretary",
@@ -418,7 +408,7 @@ const clubsData = {
         course: "BSC",
         branch: "Forensic Sc ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: jayesh,
       },
       {
         role: "Treasurer",
@@ -426,7 +416,7 @@ const clubsData = {
         course: "BCA",
         branch: "",
         year: "3rd Year",
-        photo: profileImg,
+        photo: dhruv,
       },
 
     ],
@@ -457,7 +447,7 @@ const clubsData = {
         course: "BSC Hons ",
         branch: "Agriculture ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: arambh,
       },
       {
         role: "Vice President",
@@ -473,7 +463,7 @@ const clubsData = {
         course: "BBA LLB",
         branch: "",
         year: "3rd Year",
-        photo: profileImg,
+        photo: shreya,
       },
       {
         role: "Joint Secretary",
@@ -481,7 +471,7 @@ const clubsData = {
         course: "BBA",
         branch: " ",
         year: "2nd Year",
-        photo: profileImg,
+        photo: somnath,
       },
       {
         role: "Treasurer",
